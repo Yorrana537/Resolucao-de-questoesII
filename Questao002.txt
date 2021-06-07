@@ -1,0 +1,39 @@
+
+import java.util.Locale;
+import java.util.Scanner;
+
+
+public class Questão2 {
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in);
+        
+        double valor = 5.00;
+        int vendas = 120;
+        double despesas = 200.00; 
+        
+        double lucroInicial = (valor * vendas) - despesas;
+        System.out.println("LUCRO INICIAL: R$ " +String.format("%.2f", lucroInicial));
+        System.out.println("");
+        System.out.println("   Valor do ingresso   |    Quantidade    |   Lucro");
+        
+        do{
+        valor -= 0.50;
+        vendas += 26;
+        
+        double lucroFinal = (valor * vendas) - despesas;
+        
+;        
+       
+       System.out.println("---------------------------------------------------------");
+       System.out.println("         R$ "+String.format("%.2f", valor)+ "       |       " +vendas+ "        |   R$ " +String.format("%.2f", lucroFinal));
+       
+        
+        }while(valor > 1.00);
+        System.out.println("---------------------------------------------------------");
+
+
+        sc.close();
+    }
+    
+}
